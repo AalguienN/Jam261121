@@ -37,7 +37,7 @@ public class SelectorDeMazmorra : MonoBehaviour
         if (nAleatorio < probSEnemigo)
         {
             //Load Enemigo
-            objetoActivo = Instantiate(enemigos[0], new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
+            objetoActivo = Instantiate(enemigos[Random.Range(0,enemigos.Length)], new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
             objetoActivo.name = "Enemigo";
             print("Enemigo");
         }
