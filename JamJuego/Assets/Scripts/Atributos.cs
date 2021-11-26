@@ -15,7 +15,7 @@ public class Atributos : MonoBehaviour
     //Poner aquí otros atributos como puede ser ataque, coste....
     //Actualmente no sirven para nada
     public float atk;       //Ataque
-    public float coste;       //Velocidad
+    public float coste;       //Coste
 
     private void Start()
     {
@@ -34,6 +34,15 @@ public class Atributos : MonoBehaviour
         return hp;
     }
 
+    public float getCoste()
+    {
+        return coste;
+    }
+
+    public void setCoste(float x)
+    {
+        if (coste > 0) coste += x;
+    }
     //Cuando muere el personaje se llama esta función (siempre que se destruye el objeto)
 
     /*private void OnDestroy()
