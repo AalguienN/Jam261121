@@ -11,7 +11,7 @@ public class MovePlayer : MonoBehaviour {
     Vector3 target;
 
     void Start() {
-        //inicialmente el punto de destino es la posición actual
+        //inicialmente el punto de destino es la posiciï¿½n actual
         target = transform.position;
     }
 
@@ -21,7 +21,7 @@ public class MovePlayer : MonoBehaviour {
         //Se detecta cuando hacemos clic izquierdo
         if (Input.GetMouseButton(0))
         {
-            //buscamos la posición del clic respecto la escena
+            //buscamos la posiciï¿½n del clic respecto la escena
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //Establecemos la z a 0 para que no se modifique la profundidad
             target.z = 0f;
@@ -30,7 +30,7 @@ public class MovePlayer : MonoBehaviour {
         //Movemos el objeto hacia el punto de destino a una velocidad rectificada
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
-        //Opticamente podemos debugear una línea con el trayecto a recorer
+        //Opticamente podemos debugear una lï¿½nea con el trayecto a recorer
         Debug.DrawLine(transform.position, target, Color.green);
 
     }

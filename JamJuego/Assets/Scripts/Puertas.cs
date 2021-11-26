@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Puertas : MonoBehaviour
 {
-    private float abiertas;
+    public static bool pasar;
     private BoxCollider2D box;
     public GameObject Personaje;
     public GameObject Posicion;
@@ -26,6 +26,7 @@ public class Puertas : MonoBehaviour
             Personaje.transform.position = VectPos;
             box = Posicion.GetComponent<BoxCollider2D>();
             box.enabled = false;
+            pasar = true;
 
         }
     }
