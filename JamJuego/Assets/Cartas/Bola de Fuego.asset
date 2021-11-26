@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5ddb57fae57e445a609996fe15ff8e, type: 3}
+  m_Name: Bola de Fuego
+  m_EditorClassIdentifier: 
+  img: {fileID: 0}
+  name: Bola de Fuego
+  description: La magia arcana te rodea, se materializa en forma de fuego
+  cost: 5
+  damage: 10
