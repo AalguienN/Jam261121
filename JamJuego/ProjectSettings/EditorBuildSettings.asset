@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dangeon.unity
     guid: c505f57db60a99b4bb86f81a41675e84
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 12e963299ef066740ab874dff99fb883
   m_configObjects: {}
