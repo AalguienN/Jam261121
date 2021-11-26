@@ -14,6 +14,9 @@ public class Arrow : MonoBehaviour
     private Vector2 playerXY;
     private Vector2 targetXY;
 
+    float nextX;
+    float nextY;
+
     // Start is called before the first frame update
     void Start()
     {
