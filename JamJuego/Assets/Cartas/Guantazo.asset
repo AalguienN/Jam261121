@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd5ddb57fae57e445a609996fe15ff8e, type: 3}
-  m_Name: Bola de Fuego
+  m_Name: Guantazo
   m_EditorClassIdentifier: 
   img: {fileID: 0}
-  name: Bola de Fuego
-  description: La magia arcana te rodea, se materializa en forma de fuego
-  cost: 5
-  damage: 10
+  name: Guantazo
+  description: "El ataque m\xE1s r\xE1pido que puedes hacer"
+  cost: 1
+  damage: 1
