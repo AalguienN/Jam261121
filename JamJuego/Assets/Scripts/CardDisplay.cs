@@ -2,26 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CardDisplay : MonoBehaviour
 {
     public Card card;
 
-    public Text nameText;
-    public Text descriptionText;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI descriptionText;
 
     public Image artworkImage;
-    public Text costText;
-    public Text attackText;
 
+    public TextMeshProUGUI costText;
+    public TextMeshProUGUI damageText;
 
     void Start()
     {
-        nameText.text = card.name;
-        descriptionText.text = card.description;
         artworkImage.sprite = card.img;
-        // costText = card.cost.ToString();
-        attackText.text = card.damage.ToString();
+        nameText.SetText(card.name);
+        descriptionText.SetText(card.description);
+        costText.text = card.cost.ToString();
+        damageText.text = card.damage.ToString();
     }
 
 }
