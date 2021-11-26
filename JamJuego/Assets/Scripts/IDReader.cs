@@ -1,20 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class IDReader : MonoBehaviour
 {
-    public GameObject bolaFuego;
-    public GameObject bolaHielo;
-    public GameObject guardia;
-    public GameObject contoneo;
-    public GameObject cura;
-    public GameObject clon;
-    public GameObject parentAtaques;
+    [SerializeField] private TextMeshProUGUI vidaPlayer;
+    [SerializeField] private TextMeshProUGUI escudoPlayer;
+    [SerializeField] private TextMeshProUGUI vidaEnemigo;
+
 
     public GameObject player;
     public GameObject enemy;
-    public GameObject Puntos_Accion;
     /*private float vida_enemy;
     private float vida_player;
     private float pa;
@@ -46,7 +43,7 @@ public class IDReader : MonoBehaviour
             case "Guantazo":
                 Guantazo();
                 break;
-            case "Punyetazo":
+            case "Puñetazo":
                 Punyetazo();
                 break;
             case "Bola de Fuego":
@@ -55,7 +52,7 @@ public class IDReader : MonoBehaviour
             case "Bola de Hielo":
                 BolaHielo();
                 break;
-           /* case "Guardia":
+           case "Guardia":
                 Guardia();
                 break;
             case "Contoneo":
@@ -63,14 +60,16 @@ public class IDReader : MonoBehaviour
                 break;
             case "Cura":
                 Cura();
-                break;*/
+                break;
         }
     }
     private void Guantazo()
     {
+        Debug.Log("Usando guantazo");
         if (atributos_enemy.getShield() <= 0)
         {
             atributos_enemy.setHP(atributos_enemy.getHP() - 1);
+            
             atributos_player.setCoste(atributos_player.getCoste() - 1);
         }
         else
@@ -78,9 +77,11 @@ public class IDReader : MonoBehaviour
             atributos_enemy.updateShield(atributos_enemy.getShield() - 1);
             atributos_player.setCoste(atributos_player.getCoste() - 1);
         }
+        actualizarStats();
     }
     private void Punyetazo()
     {
+        Debug.Log("Usando puñetazo");
         if (atributos_enemy.getShield() <= 0)
         {
             atributos_enemy.setHP(atributos_enemy.getHP() - 3);
@@ -91,9 +92,12 @@ public class IDReader : MonoBehaviour
             atributos_enemy.updateShield(atributos_enemy.getShield() - 3);
             atributos_player.setCoste(atributos_player.getCoste() - 2);
         }
+        actualizarStats();
     }
     private void BolaFuego()
     {
+        Debug.Log("Usando bolafuego");
+        Debug.Log(atributos_enemy.getHP());
         if (atributos_enemy.getShield() <= 0)
         {
             atributos_enemy.setHP(atributos_enemy.getHP() - 10);
@@ -104,9 +108,12 @@ public class IDReader : MonoBehaviour
             atributos_enemy.updateShield(atributos_enemy.getShield() - 10);
             atributos_player.setCoste(atributos_player.getCoste() - 5);
         }
+        actualizarStats();
     }
     private void BolaHielo()
     {
+        Debug.Log("Usando bolahielo");
+        Debug.Log(atributos_enemy.getHP());
         if (atributos_enemy.getShield() <= 0)
         {
             atributos_enemy.setHP(atributos_enemy.getHP() - 10);
@@ -117,22 +124,43 @@ public class IDReader : MonoBehaviour
             atributos_enemy.updateShield(atributos_enemy.getShield() - 10);
             atributos_player.setCoste(atributos_player.getCoste() - 5);
         }
+        Debug.Log(atributos_enemy.getHP());
+        actualizarStats();
     }
-    /*private void Guardia()
+    private void Guardia()
     {
-        atributos_enemy.;
-        pa--;
+        Debug.Log("Usando guardia");
+        Debug.Log(atributos_player.getShield());
+        atributos_player.updateShield(atributos_player.getShield() + 1);
+        atributos_player.setCoste(atributos_player.getCoste() - 1);
+        Debug.Log(atributos_player.getShield());
+        actualizarStats();
     }
     private void Contoneo()
     {
-        escudo_player = escudo_player + 6;
-        pa = pa - 3;
+        Debug.Log("Usando contoneo");
+        Debug.Log(atributos_player.getShield());
+        atributos_player.updateShield(atributos_player.getShield() + 6);
+        atributos_player.setCoste(atributos_player.getCoste() - 3);
+        Debug.Log(atributos_player.getShield());
+        actualizarStats();
     }
     private void Cura()
     {
-        vida_player = vida_player + 4;
-        pa = pa - 2;
+        Debug.Log("Usando cura");
+        Debug.Log(atributos_player.getHP());
+        atributos_player.setHP(atributos_player.getHP() + 4); 
+        atributos_player.setCoste(atributos_player.getCoste() - 2);
+        Debug.Log(atributos_player.getHP());
+        actualizarStats();
     }
-    */
+
+    private void actualizarStats()
+    {
+        vidaEnemigo.text = atributos_enemy.getHP().ToString();
+        vidaPlayer.text = atributos_player.getHP().ToString();
+        escudoPlayer.text = atributos_player.getShield().ToString();
+    }
+
 
 }
