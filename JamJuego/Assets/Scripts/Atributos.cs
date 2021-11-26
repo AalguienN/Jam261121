@@ -48,6 +48,12 @@ public class Atributos : MonoBehaviour
     {
         if (coste > 0) coste += x;
     }
+
+    public void updateShield(int x) {
+        shield += x; 
+    }
+
+    public int getShield() { return shield; }
     //Cuando muere el personaje se llama esta funci�n (siempre que se destruye el objeto)
 
     //private void OnDestroy()
