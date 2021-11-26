@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/PersonajeEscena.unity
+    guid: 2086fe8723cff0d4fabdc77734d856dc
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 47f1f40d56ebda648af0a0eebbed9574
+  - enabled: 1
+    path: Assets/Scenes/Card Collection.unity
+    guid: 3b2d2bee81d56b24b89ec1c8e5bb65cc
+  - enabled: 1
+    path: Assets/Scenes/Test de Cartas.unity
+    guid: c36ab7d335e38f74abdbea323ac7ae4e
   m_configObjects: {}
