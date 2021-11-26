@@ -16,12 +16,12 @@ public class CardDisplay : MonoBehaviour
 
 
     void Start()
-    {
+    {/*
         nameText.text = card.name;
         descriptionText.text = card.description;
         artworkImage.sprite = card.img;
         costText = card.cost.ToString();
         attackText.text = card.damage.ToString();
-    }
+  */  }
 
 }
