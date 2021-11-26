@@ -21,7 +21,7 @@ public class Atributos : MonoBehaviour
     //Poner aqu� otros atributos como puede ser ataque, coste....
     //Actualmente no sirven para nada
     public float atk;       //Ataque
-    public float coste;       //coste
+    public float coste;       //Coste
 
     private void Start()
     {
@@ -39,21 +39,15 @@ public class Atributos : MonoBehaviour
         return hp;
     }
 
-    public void updateHP(float x) {
-        if (hp > 0) {
-            hp += x;
-            vidaPersonaje.text = hp.ToString();
-        } 
-        //Si hp <= 0 el personaje muere
-        else Destroy(this.gameObject);
+    public float getCoste()
+    {
+        return coste;
     }
 
-    public void updateShield(int x) {
-        shield += x; 
+    public void setCoste(float x)
+    {
+        if (coste > 0) coste += x;
     }
-
-    public int getShield() { return shield; }
-
     //Cuando muere el personaje se llama esta funci�n (siempre que se destruye el objeto)
 
     //private void OnDestroy()
