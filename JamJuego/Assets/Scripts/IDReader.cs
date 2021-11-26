@@ -41,84 +41,86 @@ public class IDReader : MonoBehaviour
     public void UsarCarta(GameObject laCarta)
     {
         stringID = laCarta.name;
-        switch (stringID) {
-            case "Guantazo" :
+        switch (stringID)
+        {
+            case "Guantazo":
                 Guantazo();
                 break;
-            case "Punyetazo" :
+            case "Punyetazo":
                 Punyetazo();
-                break; 
-            case "Bola de Fuego" :
+                break;
+            case "Bola de Fuego":
                 BolaFuego();
-                break; 
-            case "Bola de Hielo" :
+                break;
+            case "Bola de Hielo":
                 BolaHielo();
-                break; 
-            case "Guardia" :
+                break;
+           /* case "Guardia":
                 Guardia();
-                break; 
-            case "Contoneo" :
+                break;
+            case "Contoneo":
                 Contoneo();
-                break; 
-            case "Cura" :
+                break;
+            case "Cura":
                 Cura();
-                break; 
+                break;*/
         }
     }
     private void Guantazo()
     {
         if (atributos_enemy.getShield() <= 0)
         {
-            atributos_enemy.updateHP(atributos_enemy.getHP()--);
-            atributos_player.coste--;
+            atributos_enemy.setHP(atributos_enemy.getHP() - 1);
+            atributos_player.setCoste(atributos_player.getCoste() - 1);
         }
         else
         {
-            atributos_enemy.getShield()--;
-            atributos_enemy.getCoste()--;
+            atributos_enemy.updateShield(atributos_enemy.getShield() - 1);
+            atributos_player.setCoste(atributos_player.getCoste() - 1);
         }
     }
-    private void Punyetazo ()
+    private void Punyetazo()
     {
         if (atributos_enemy.getShield() <= 0)
         {
-            = vida_enemy - 3;
-            pa = pa - 2;
+            atributos_enemy.setHP(atributos_enemy.getHP() - 3);
+            atributos_player.setCoste(atributos_player.getCoste() - 2);
         }
         else
         {
-            escudo_enemy = escudo_enemy - 3;
-            pa = pa - 2;
+            atributos_enemy.updateShield(atributos_enemy.getShield() - 3);
+            atributos_player.setCoste(atributos_player.getCoste() - 2);
         }
     }
     private void BolaFuego()
     {
-        if (escudo_enemy <= 0)
+        if (atributos_enemy.getShield() <= 0)
         {
-            vida_enemy = vida_enemy - 10;
-            pa = pa - 5;
+            atributos_enemy.setHP(atributos_enemy.getHP() - 10);
+            atributos_player.setCoste(atributos_player.getCoste() - 5);
         }
         else
         {
-            escudo_enemy = escudo_enemy - 10;
-            pa = pa - 5;
+            atributos_enemy.updateShield(atributos_enemy.getShield() - 10);
+            atributos_player.setCoste(atributos_player.getCoste() - 5);
         }
     }
     private void BolaHielo()
     {
-        if (escudo_enemy <= 0)
+        if (atributos_enemy.getShield() <= 0)
         {
-            vida_enemy = vida_enemy - 10;
-            pa = pa - 5;
+            atributos_enemy.setHP(atributos_enemy.getHP() - 10);
+            atributos_player.setCoste(atributos_player.getCoste() - 5);
         }
         else
         {
-            escudo_enemy = escudo_enemy - 10;
-            pa = pa - 5;
+            atributos_enemy.updateShield(atributos_enemy.getShield() - 10);
+            atributos_player.setCoste(atributos_player.getCoste() - 5);
         }
     }
-    private void Guardia() {
-        escudo_player++;
+    /*private void Guardia()
+    {
+        atributos_enemy.;
         pa--;
     }
     private void Contoneo()
@@ -131,6 +133,6 @@ public class IDReader : MonoBehaviour
         vida_player = vida_player + 4;
         pa = pa - 2;
     }
-
+    */
 
 }
