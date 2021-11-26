@@ -10,7 +10,7 @@ public class Puertas : MonoBehaviour
     public GameObject Posicion;
     public Vector3 VectPos;
     public bool combate;
-    
+    private GameObject enemigo;
 
 
     void Start() 
@@ -27,7 +27,19 @@ public class Puertas : MonoBehaviour
             box = Posicion.GetComponent<BoxCollider2D>();
             box.enabled = false;
             pasar = true;
+        }
+    }
 
+    void Update()
+    {
+        enemigo = GameObject.FindWithTag("Enemigo");
+        if (enemigo != null)
+        {
+            combate = true;
+        }
+        else 
+        { 
+            combate = false;
         }
     }
 }
