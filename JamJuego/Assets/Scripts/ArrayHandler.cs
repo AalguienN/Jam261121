@@ -63,7 +63,7 @@ public class ArrayHandler : MonoBehaviour
 
     public void ActualizarMano(int numCartaUsada)
     {
-        mano[numCartaUsada] = mazo[indice_mazo];
+        mano[numCartaUsada] = mazo[indice_mazo % mazo_length];
         indice_mazo++;
     }
     

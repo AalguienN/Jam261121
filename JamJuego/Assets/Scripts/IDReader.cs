@@ -43,7 +43,7 @@ public class IDReader : MonoBehaviour
             case "Guantazo":
                 Guantazo();
                 break;
-            case "Puñetazo":
+            case "Puï¿½etazo":
                 Punyetazo();
                 break;
             case "Bola de Fuego":
@@ -74,14 +74,14 @@ public class IDReader : MonoBehaviour
         }
         else
         {
-            atributos_enemy.updateShield(atributos_enemy.getShield() - 1);
+            atributos_enemy.updateShield(-1);
             atributos_player.setCoste(atributos_player.getCoste() - 1);
         }
         actualizarStats();
     }
     private void Punyetazo()
     {
-        Debug.Log("Usando puñetazo");
+        Debug.Log("Usando puï¿½etazo");
         if (atributos_enemy.getShield() <= 0)
         {
             atributos_enemy.setHP(atributos_enemy.getHP() - 3);
@@ -89,7 +89,7 @@ public class IDReader : MonoBehaviour
         }
         else
         {
-            atributos_enemy.updateShield(atributos_enemy.getShield() - 3);
+            atributos_enemy.updateShield(-3);
             atributos_player.setCoste(atributos_player.getCoste() - 2);
         }
         actualizarStats();
@@ -121,7 +121,7 @@ public class IDReader : MonoBehaviour
         }
         else
         {
-            atributos_enemy.updateShield(atributos_enemy.getShield() - 10);
+            atributos_enemy.updateShield(-10);
             atributos_player.setCoste(atributos_player.getCoste() - 5);
         }
         Debug.Log(atributos_enemy.getHP());
@@ -131,7 +131,7 @@ public class IDReader : MonoBehaviour
     {
         Debug.Log("Usando guardia");
         Debug.Log(atributos_player.getShield());
-        atributos_player.updateShield(atributos_player.getShield() + 1);
+        atributos_player.updateShield(1);
         atributos_player.setCoste(atributos_player.getCoste() - 1);
         Debug.Log(atributos_player.getShield());
         actualizarStats();
@@ -140,7 +140,7 @@ public class IDReader : MonoBehaviour
     {
         Debug.Log("Usando contoneo");
         Debug.Log(atributos_player.getShield());
-        atributos_player.updateShield(atributos_player.getShield() + 6);
+        atributos_player.updateShield(6);
         atributos_player.setCoste(atributos_player.getCoste() - 3);
         Debug.Log(atributos_player.getShield());
         actualizarStats();
