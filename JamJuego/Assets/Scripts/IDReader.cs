@@ -75,7 +75,7 @@ public class IDReader : MonoBehaviour
         else
         {
             atributos_enemy.getShield()--;
-            atributos_enemy.coste--;
+            atributos_enemy.getCoste()--;
         }
     }
     private void Punyetazo ()
