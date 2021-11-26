@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 655aa10ab18d0a440958b9a51fb1a7eb, type: 3}
-  m_Name: Ataque Rapido
+  m_Script: {fileID: 11500000, guid: dd5ddb57fae57e445a609996fe15ff8e, type: 3}
+  m_Name: Bola de Fuego
   m_EditorClassIdentifier: 
-  imagen: {fileID: 0}
-  nombre: "Ataque r\xE1pido"
-  descripcion: "Aqu\xED va la descripci\xF3n"
-  coste: 1
-  ataque: 1
+  img: {fileID: 0}
+  name: 
+  description: 
+  cost: 0
+  damage: 0

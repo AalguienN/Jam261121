@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:JamJuego/Assets/Scripts/CardDisplay.cs.meta
+guid: cd9376e548698b3479b7e1328030822b
+=======
 guid: 237eba724c425554e81de0e6b217566e
+>>>>>>> Stashed changes:JamJuego/Assets/Scripts/ProyectilRecto.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

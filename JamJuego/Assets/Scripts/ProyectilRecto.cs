@@ -38,7 +38,7 @@ public class Arrow : MonoBehaviour
 
         if (movePosition == target.transform.position)
         {
-            HacerDanyo(target);
+            //HacerDanyo(target);
         }
     }
 }
