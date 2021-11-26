@@ -20,7 +20,7 @@ public class CardDisplay : MonoBehaviour
         nameText.text = card.name;
         descriptionText.text = card.description;
         artworkImage.sprite = card.img;
-        costText = card.cost.ToString();
+        // costText = card.cost.ToString();
         attackText.text = card.damage.ToString();
     }
 
