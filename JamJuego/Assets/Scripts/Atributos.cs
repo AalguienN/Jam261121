@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+
 public class Atributos : MonoBehaviour
 {
     [Header("Vida")]
@@ -51,10 +52,14 @@ public class Atributos : MonoBehaviour
         shield += x; 
     }
 
+    public int getShield() { return shield; }
+
     //Cuando muere el personaje se llama esta funci�n (siempre que se destruye el objeto)
 
-    /*private void OnDestroy()
+    //private void OnDestroy()
+    /*
     {
         LoadScene("Menu");
-    }*/
+    }
+    */
 }
