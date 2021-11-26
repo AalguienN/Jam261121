@@ -195,17 +195,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1445232522}
     m_Modifications:
+    - target: {fileID: 3079366916207318352, guid: 08f70244a94fe4f4ca1124a42d8b5317, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 71f0ec195f80af04f8913d4ebac7e153, type: 2}
+    - target: {fileID: 3079366916207318367, guid: 08f70244a94fe4f4ca1124a42d8b5317, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -468165090741290304, guid: 962eab7014106294a9ec8f741220af45, type: 3}
     - target: {fileID: 3079366916961578752, guid: 08f70244a94fe4f4ca1124a42d8b5317, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3079366916961578752, guid: 08f70244a94fe4f4ca1124a42d8b5317, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 9.07
       objectReference: {fileID: 0}
     - target: {fileID: 3079366916961578752, guid: 08f70244a94fe4f4ca1124a42d8b5317, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.76
       objectReference: {fileID: 0}
     - target: {fileID: 3079366916961578752, guid: 08f70244a94fe4f4ca1124a42d8b5317, type: 3}
       propertyPath: m_LocalPosition.z
