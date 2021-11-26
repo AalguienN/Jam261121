@@ -10,6 +10,9 @@ public class Atributos : MonoBehaviour
     public float maxHP = 100;
     [SerializeField] private float hp;
     [SerializeField] private TextMeshProUGUI vidaPersonaje;
+    [SerializeField] private int shield;
+    [SerializeField] private TextMeshProUGUI escudoPersonaje;
+
 
     
 
@@ -21,6 +24,7 @@ public class Atributos : MonoBehaviour
 
     private void Start()
     {
+        shield = 0;
         hp = maxHP;
     }
 
@@ -41,6 +45,10 @@ public class Atributos : MonoBehaviour
         } 
         //Si hp <= 0 el personaje muere
         else Destroy(this.gameObject);
+    }
+
+    public void updateShield(int x) {
+        shield += x; 
     }
 
     //Cuando muere el personaje se llama esta funci�n (siempre que se destruye el objeto)
