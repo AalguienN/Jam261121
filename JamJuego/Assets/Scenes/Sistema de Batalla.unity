@@ -123,6 +123,41 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &423622253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 423622254}
+  m_Layer: 5
+  m_Name: Mazo Entero
+  m_TagString: Mazo Creado
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &423622254
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423622253}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 482, y: 270}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &453158435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,35 +1379,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cartaBP: {fileID: 650682346815565863, guid: 69ca801b699c8274c8a6d7fba59d8928, type: 3}
+  mazoPlaceholder: {fileID: 423622253}
   tiposDeCarta:
-  - {fileID: 8926192553871798510, guid: 25c713496de9c3341b26c6e44363ed75, type: 3}
-  - {fileID: 8273897045346218633, guid: e7d344926cba9f241ab945d1df9bf173, type: 3}
-  - {fileID: 949093530688707292, guid: b7d4f17614db1104e9ca830861b0c1a1, type: 3}
-  - {fileID: 3971149435295783152, guid: 11b4fd27a8b0f6d43b979d739324fb66, type: 3}
-  - {fileID: 5476819833642422372, guid: fe2c6161ad3af884197ac2b6ba576331, type: 3}
-  - {fileID: 6530037490223554601, guid: 99f5961a9d027f24cb42e0847046d9f5, type: 3}
-  - {fileID: 1390853438511651259, guid: 0c0aa8f84c6da334484d2caffe17f01d, type: 3}
-  mazo:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1e9cc7fb3467db54985ec3e4e7be7cd1, type: 2}
+  - {fileID: 11400000, guid: 6121898ec6afdbe4490af759d2a96c9c, type: 2}
+  - {fileID: 11400000, guid: 3d8a45d0c6dfb6147a4ef7bcd7740908, type: 2}
+  - {fileID: 11400000, guid: 5e629fff9820db049adfacb7a9ad204d, type: 2}
+  - {fileID: 11400000, guid: b95400b3938bc5b43b3b5c7c784d08a2, type: 2}
+  - {fileID: 11400000, guid: a93920000e9a5f143a5538350f7abf5b, type: 2}
+  - {fileID: 11400000, guid: 2e6eabdbfe4dca44299b64476f5d70d1, type: 2}
   mano:
   - {fileID: 0}
   - {fileID: 0}

@@ -17,3 +17,5 @@ MonoBehaviour:
   description: "Como kebab a las 4 de la ma\xF1ana"
   cost: 2
   damage: 4
+  esSalud: 1
+  esBloqueo: 0

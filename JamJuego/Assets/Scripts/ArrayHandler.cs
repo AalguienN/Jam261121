@@ -5,22 +5,26 @@ using UnityEngine;
 public class ArrayHandler : MonoBehaviour
 {
     public GameObject cartaBP;
-    public GameObject[] tiposDeCarta;
+    public GameObject mazoPlaceholder;
+    public Card[] tiposDeCarta;
     private int mazo_length = 20;
     private int mano_length = 4;
-    public GameObject[] mazo;
+    private GameObject[] mazo;
     public GameObject[] mano;
     public GameObject[] mano2;
     private int indice_mazo;
 
     public void Start() {
-        //mazo = new GameObject[mazo_length];
+        mazo = new GameObject[mazo_length];
         mano = new GameObject[mano_length];
-       // mano2 = new GameObject[mano_length];*/
+
         indice_mazo = 0;
         for (int i = 0; i < mazo_length; i++)
         {
-             mazo[i] = tiposDeCarta[Random.Range(0, tiposDeCarta.Length)];
+            
+            mazo[i] = Instantiate(cartaBP);
+            mazo[i].GetComponent<CardDisplay>().card = tiposDeCarta[Random.Range(0, tiposDeCarta.Length)];
+            mazo[i].transform.SetParent(mazoPlaceholder.transform, false);
         }
         for (int j = 0; j < mano_length; j++)
         {
@@ -33,28 +37,28 @@ public class ArrayHandler : MonoBehaviour
     {
         
         if (Input.GetKeyDown(KeyCode.Q) == true) {
-            this.gameObject.GetComponent<IDReader>().UsarCarta(mano[0]);
+            this.gameObject.GetComponent<IDReader>().UsarCarta(mano[0].GetComponent<CardDisplay>().card);
             ActualizarMano(0);
             ColocarCartas();
 
         }
         if (Input.GetKeyDown(KeyCode.W) == true)
         {
-            this.gameObject.GetComponent<IDReader>().UsarCarta(mano[1]);
+            this.gameObject.GetComponent<IDReader>().UsarCarta(mano[1].GetComponent<CardDisplay>().card);
             ActualizarMano(1);
             ColocarCartas();
 
         }
         if (Input.GetKeyDown(KeyCode.E) == true)
         {
-            this.gameObject.GetComponent<IDReader>().UsarCarta(mano[2]);
+            this.gameObject.GetComponent<IDReader>().UsarCarta(mano[2].GetComponent<CardDisplay>().card);
             ActualizarMano(2);
             ColocarCartas();
 
         }
         if (Input.GetKeyDown(KeyCode.R) == true)
         {
-            this.gameObject.GetComponent<IDReader>().UsarCarta(mano[3]);
+            this.gameObject.GetComponent<IDReader>().UsarCarta(mano[3].GetComponent<CardDisplay>().card);
             ActualizarMano(3);
             ColocarCartas();
 

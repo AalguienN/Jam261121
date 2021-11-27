@@ -11,4 +11,6 @@ public class Card : ScriptableObject
 
     public int cost;
     public int damage;
+    public bool esSalud;
+    public bool esBloqueo;
 }

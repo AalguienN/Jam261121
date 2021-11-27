@@ -16,4 +16,6 @@ MonoBehaviour:
   name: Guardia
   description: Te defiendes, pero poco
   cost: 1
-  damage: -1
+  damage: 1
+  esSalud: 0
+  esBloqueo: 1
