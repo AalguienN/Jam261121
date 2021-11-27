@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour {
 
-    // Gestionar la velocidad
+    [Header("Velocidad")]
     public float speed;
 
     //Guardar punto de destino
     Vector3 target;
+
+    [Header("Ultima Puerta Pasada")]
+    public GameObject ultPuerta;
 
     void Start() {
         //inicialmente el punto de destino es la posici�n actual

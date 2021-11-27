@@ -4,42 +4,60 @@ using UnityEngine;
 
 public class Puertas : MonoBehaviour
 {
-    public static bool pasar;
+    //[header("puerta abierta")]
+    //public static bool pasar;
+    [Header("Collider")]
     private BoxCollider2D box;
+    [Header("Referencias a objectos")]
     public GameObject Personaje;
     public GameObject Posicion;
-    public Vector3 VectPos;
+    public GameObject[] todasPuertas;
+    //Posicion del personaje
+    private Vector3 VectPos;
+
+    //Existe enemigo
     public bool combate;
-    private GameObject enemigo;
+
+    [Header("Graficos")]
+    public GameObject puertaGraf;
+    
 
 
     void Start() 
     {
         VectPos = Posicion.transform.position;
+        box = this.GetComponent<BoxCollider2D>();
     }
     
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && combate == false)
+        if(collision.CompareTag("Player") && GameObject.FindWithTag("Enemigo") == null && Personaje.GetComponent<MovePlayer>().ultPuerta != this.gameObject)
         {
+            Personaje.GetComponent<MovePlayer>().ultPuerta = Posicion.gameObject;
+            
+            print(Personaje.GetComponent<MovePlayer>().ultPuerta.name);
+
+            foreach (GameObject puerta in todasPuertas) {
+                puerta.GetComponent<Puertas>().ActualizarPuerta();
+            }
             Personaje.transform.position = VectPos;
-            box = Posicion.GetComponent<BoxCollider2D>();
+        }
+        
+    }
+
+    public void ActualizarPuerta() {
+        
+        if (this.gameObject == Personaje.GetComponent<MovePlayer>().ultPuerta)
+        {
+            this.puertaGraf.SetActive(true);
             box.enabled = false;
-            pasar = true;
+        }
+        else
+        {
+            this.puertaGraf.SetActive(false);
+            box.enabled = true;
         }
     }
 
-    void Update()
-    {
-        enemigo = GameObject.FindWithTag("Enemigo");
-        if (enemigo != null)
-        {
-            combate = true;
-        }
-        else 
-        { 
-            combate = false;
-        }
-    }
 }
