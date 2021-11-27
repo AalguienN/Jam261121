@@ -35,9 +35,8 @@ public class Puertas : MonoBehaviour
         if(collision.CompareTag("Player") && GameObject.FindWithTag("Enemigo") == null && Personaje.GetComponent<MovePlayer>().ultPuerta != this.gameObject)
         {
             Personaje.GetComponent<MovePlayer>().ultPuerta = Posicion.gameObject;
-            
-            print(Personaje.GetComponent<MovePlayer>().ultPuerta.name);
 
+            //Llamamos al resto de puertas para que se acutalicen 
             foreach (GameObject puerta in todasPuertas) {
                 puerta.GetComponent<Puertas>().ActualizarPuerta();
             }
@@ -46,6 +45,7 @@ public class Puertas : MonoBehaviour
         
     }
 
+    // Cuando "cambiamos" de sala se llama a esta función a cada puerta
     public void ActualizarPuerta() {
         
         if (this.gameObject == Personaje.GetComponent<MovePlayer>().ultPuerta)
