@@ -5,7 +5,7 @@ using UnityEngine;
 public class ArrayHandler : MonoBehaviour
 {
     public GameObject cartaBP;
-    public GameObject mazoPlaceholder;
+    public GameObject mazoPlaceholder; // Esto es un objeto vacio del Inspector que funciona de padre al instanciar
     public Card[] tiposDeCarta;
     private int mazo_length = 20;
     private int mano_length = 4;
